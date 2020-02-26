@@ -11,6 +11,11 @@ class SubscriptionProvider implements SubscriptionProviderInterface
     public function __construct(Dispatcher $dispatcher)
     {
         $this->dispatcher = $dispatcher;
+
+    }
+    
+    public function start()
+    {
         $this->load();
         $this->attach();
     }
